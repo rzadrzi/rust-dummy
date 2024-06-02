@@ -3,5 +3,5 @@
 fn main(){
 
     println!("Hello REZA, welcome to rust!!!");
-
+    println!("Github is socks")
 }
