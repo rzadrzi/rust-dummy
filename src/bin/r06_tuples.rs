@@ -1,5 +1,9 @@
 
+/*
 
+in Tuples does not need each element has same datatype
+
+*/
 fn main() {
     let t = ("reza", 2.65, 3);
     println!("tuple posion one:\t{:?}", t.0);
