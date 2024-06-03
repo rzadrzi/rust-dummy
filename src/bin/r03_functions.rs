@@ -12,11 +12,27 @@ fn factorial(n:u128)->u128{
     }
 }
 
+
+fn fibonacci(n:usize)->Vec<i32>{
+    let mut list = vec![0,1];
+    for i in 2..n{
+        list.push( list[i-2] + list[i-1] );
+    }
+    return list;
+}
 fn main(){
     let a:i32 = 23;
     let b:i32 = 13;
     println!("{:?} + {:?} = {:?}", a, b, add(a, b));
 
-    println!("factorial: {:?}", factorial(5))
+    println!("factorial: {:?}", factorial(5));
+
+    let n: usize = 10;
+
+    let fib_list = fibonacci(n);
+
+    for (i, v) in fib_list.iter().enumerate(){
+        println!("{:?}  ->  {:?}", i, v);
+    }
 
 }
