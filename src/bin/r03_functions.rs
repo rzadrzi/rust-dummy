@@ -27,6 +27,13 @@ fn main(){
     let b:i32 = 13;
     println!("{:?} + {:?} = {:?}", a, b, add(a, b));
 
+    // cloture
+    let add_closure = |a:i32, b:i32|->i32{
+        a + b
+    };
+
+    println!("closure: {:?}",add_closure(20, 45));
+
     println!("factorial: {:?}", factorial(5));
 
     let n: usize = 10;
