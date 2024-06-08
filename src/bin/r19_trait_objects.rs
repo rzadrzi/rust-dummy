@@ -18,12 +18,17 @@ trait LandCapable {
     }
 }
 
+fn road_trip(vehicle:&dyn LandCapable){
+    vehicle.drive();
+}
 
 fn main(){
 
     let sedan = Sedan;
     let suv = SUV;
 
-    sedan.drive();
-    suv.drive();
+    // sedan.drive();
+    // suv.drive();
+    road_trip(&sedan);
+    road_trip(&suv);
 }
