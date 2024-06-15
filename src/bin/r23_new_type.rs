@@ -16,7 +16,6 @@ impl<State> Employee<State>{
 #[derive(Debug)]
 struct Agreement;
 
-#[derive(Debug)]
 struct Signature;
 
 struct Training;
