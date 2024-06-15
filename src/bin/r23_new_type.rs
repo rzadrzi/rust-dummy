@@ -13,7 +13,6 @@ impl<State> Employee<State>{
 
     }
 }
-#[derive(Debug)]
 struct Agreement;
 
 struct Signature;
