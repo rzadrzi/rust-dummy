@@ -27,7 +27,6 @@ struct FailedTraining{
     score: u8
 }
 
-#[derive(Debug)]
 struct OnBoardedCompelte{
     score: u8
 }
