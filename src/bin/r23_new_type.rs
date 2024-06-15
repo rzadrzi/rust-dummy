@@ -19,7 +19,6 @@ struct Agreement;
 #[derive(Debug)]
 struct Signature;
 
-#[derive(Debug)]
 struct Training;
 
 struct FailedTraining{
