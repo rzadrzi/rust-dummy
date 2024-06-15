@@ -22,7 +22,6 @@ struct Signature;
 #[derive(Debug)]
 struct Training;
 
-#[derive(Debug)]
 struct FailedTraining{
     score: u8
 }
