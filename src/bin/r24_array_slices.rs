@@ -1,6 +1,6 @@
 
 
-struct Array{
+struct I32{
     items:[i32;9]
 }
 
@@ -9,18 +9,29 @@ struct Chars{
 }
 
 trait Object {
-    fn show_items(obj: &self){
-        for i in obj.items{
+    fn show_items(&self){
+        // for i in self.items{
+        //     println!("{:?}", i)
+        // }
+    }
+}
+
+impl Object for I32 {
+    fn show_items(&self){
+        for i in self.items{
             println!("{:?}", i)
         }
     }
 }
 
-fn show_array(arr:&[i32]){
-    for i in arr{
-        println!("{:?}", i)
-    }
+impl Object for Chars {
+    
 }
+// fn show_array(arr:&[i32]){
+//     for i in arr{
+//         println!("{:?}", i)
+//     }
+// }
 
 fn show_slice(slice:&[char]){
     for i in slice{
@@ -29,8 +40,14 @@ fn show_slice(slice:&[char]){
 }
 
 fn main(){
-    let arr:[i32; 9] = [1,2,3,4,5,6,7,8,10];
-    show_array(&arr);
+    // let arr:[i32; 9] = [1,2,3,4,5,6,7,8,10];
+    // show_array(&arr);
+    let arr = I32{
+        items:[1,2,3,4,5,6,7,8,10]
+    };
+
+    arr.show_items();
+    
 
     let charss: [char; 9] = ['A', 'B', 'C', 'D', 'E', 'F', 'I', 'J', 'K'];
     let s:&[char]=&charss;
