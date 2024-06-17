@@ -7,4 +7,6 @@ fn show_array(arr:&[i32]){
 fn main(){
     let arr:[i32; 9] = [1,2,3,4,5,6,7,8,10];
     show_array(&arr);
+
+    let Char: [char; 9] = ['A', 'B', 'C', 'D', 'E', 'F', 'I', 'J', 'K'];
 }
