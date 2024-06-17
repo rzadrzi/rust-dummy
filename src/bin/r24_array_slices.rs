@@ -38,9 +38,11 @@ fn main(){
 
     arr.show_items();
     
-    
+
     let charss = Chars{
         items:['A', 'B', 'C', 'D', 'E', 'F', 'I', 'J', 'K']
     };
     charss.show_items();
+
+    let slice:&[char]=&charss.items[1..=5];
 }
