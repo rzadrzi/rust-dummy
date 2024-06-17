@@ -5,7 +5,7 @@ struct I32{
 }
 
 struct Chars{
-    items:[i32;9]
+    items:[char;9]
 }
 
 trait Object {
@@ -25,6 +25,11 @@ impl Object for I32 {
 }
 
 impl Object for Chars {
+    fn show_items(&self){
+        for i in self.items{
+            println!("{:?}", i)
+        }
+    }
     
 }
 // fn show_array(arr:&[i32]){
@@ -49,7 +54,11 @@ fn main(){
     arr.show_items();
     
 
-    let charss: [char; 9] = ['A', 'B', 'C', 'D', 'E', 'F', 'I', 'J', 'K'];
-    let s:&[char]=&charss;
-    show_slice(s);
+    // let charss: [char; 9] = ['A', 'B', 'C', 'D', 'E', 'F', 'I', 'J', 'K'];
+    // let s:&[char]=&charss;
+    // show_slice(s);
+    let charss = Chars{
+        items:['A', 'B', 'C', 'D', 'E', 'F', 'I', 'J', 'K']
+    };
+    charss.show_items();
 }
