@@ -1,3 +1,21 @@
+
+
+struct Array{
+    items:[i32;9]
+}
+
+struct Chars{
+    items:[i32;9]
+}
+
+trait Object {
+    fn show_items(obj: &self){
+        for i in obj.items{
+            println!("{:?}", i)
+        }
+    }
+}
+
 fn show_array(arr:&[i32]){
     for i in arr{
         println!("{:?}", i)
