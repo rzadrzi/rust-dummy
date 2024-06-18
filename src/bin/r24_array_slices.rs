@@ -1,48 +1,76 @@
+use std::fmt::{self, Debug};
 
 
-struct I32{
-    items:[i32;9]
+#[derive(Debug, Clone)]
+struct Array<T>
+{
+    items:[T; 10]
 }
 
-struct Chars{
-    items:[char;9]
-}
 
-trait Object {
-    fn show_items(&self){}
-}
-
-impl Object for I32 {
-    fn show_items(&self){
-        for i in self.items{
-            println!("{:?}", i)
-        }
+impl <T> Array<T> {
+    pub fn new(itemss:[T;10]) -> Self{
+        Self { items: itemss }
     }
-}
 
-impl Object for Chars {
-    fn show_items(&self){
-        for i in self.items{
-            println!("{:?}", i)
-        }
-    }
+    // pub fn show_items(&self){
+    //     for i in &self.items{
+    //         println!("{:?}", i);
+    //     }
+    // }
     
 }
+
+// impl<T> fmt::Display for Array<T> {
+//      fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result{
+//         write!(f, "{}", self)
+//      }
+// }
+// struct I32{
+//     items:[i32;9]
+// }
+
+// struct Chars{
+//     items:[char;9]
+// }
+
+// struct Slice{
+
+// }
+
+// trait Object {
+//     fn show_items(&self){
+//         for i in self{
+//             println!("{:?}", i);
+//         }
+        
+//     }
+// }
+
+// impl Object for I32 {
+//     fn show_items(&self){
+//         for i in self.items{
+//             println!("{:?}", i)
+//         }
+//     }
+// }
+
+// impl Object for Chars {
+//     fn show_items(&self){
+//         for i in self.items{
+//             println!("{:?}", i)
+//         }
+//     }
+    
+// }
 
 
 fn main(){
 
-    let arr = I32{
-        items:[1,2,3,4,5,6,7,8,10]
-    };
+    let arr = Array::new([1,2,3,4,5,6,7,8,9,10]);
+    println!("{:?}",arr);
 
-    arr.show_items();
-    
+    let charrs:Array<char> = Array::new(['A', 'B', 'C', 'D', 'E', 'F', 'I', 'J', 'K','L']);
+    println!("{:?}", charrs);
 
-    let charss = Chars{
-        items:['A', 'B', 'C', 'D', 'E', 'F', 'I', 'J', 'K']
-    };
-    charss.show_items();
-
-    let slice:&[char]=&charss.items[1..=5];
 }
