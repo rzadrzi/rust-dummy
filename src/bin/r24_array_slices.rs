@@ -21,49 +21,6 @@ impl <T> Array<T> {
     
 }
 
-// impl<T> fmt::Display for Array<T> {
-//      fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result{
-//         write!(f, "{}", self)
-//      }
-// }
-// struct I32{
-//     items:[i32;9]
-// }
-
-// struct Chars{
-//     items:[char;9]
-// }
-
-// struct Slice{
-
-// }
-
-// trait Object {
-//     fn show_items(&self){
-//         for i in self{
-//             println!("{:?}", i);
-//         }
-        
-//     }
-// }
-
-// impl Object for I32 {
-//     fn show_items(&self){
-//         for i in self.items{
-//             println!("{:?}", i)
-//         }
-//     }
-// }
-
-// impl Object for Chars {
-//     fn show_items(&self){
-//         for i in self.items{
-//             println!("{:?}", i)
-//         }
-//     }
-    
-// }
-
 
 fn main(){
 
