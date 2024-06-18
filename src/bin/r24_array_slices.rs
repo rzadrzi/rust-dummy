@@ -8,16 +8,10 @@ struct Array<T>
 }
 
 
-impl <T> Array<T> {
+impl<T> Array<T> {
     pub fn new(itemss:[T;10]) -> Self{
         Self { items: itemss }
     }
-
-    // pub fn show_items(&self){
-    //     for i in &self.items{
-    //         println!("{:?}", i);
-    //     }
-    // }
     
 }
 
